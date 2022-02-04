@@ -1,0 +1,136 @@
+1st Question
+import java.util.*;
+public class AssessmentQ1 {
+    public static void main(String[] args){  
+        Scanner sc= new Scanner(System.in); 		//input 4 numbers
+        System.out.print("Input first number: ");  
+        int a= sc.nextInt();  
+        System.out.print("Input second number: ");  
+        int b= sc.nextInt();  
+        System.out.print("Input third number: ");  
+        int c= sc.nextInt();
+        System.out.print("Input forth number: ");  
+        int d= sc.nextInt();  
+        if((a==b)&&(b==c)&&(c==d)){			//compare all numbers		
+            System.out.println("Numbers are equal.");
+        }
+        else{
+            System.out.println("Numbers are not equal.");
+        } 
+    }  
+}
+
+
+2nd Question
+import java.util.*;
+public class AssessmentQ2 {
+    public static void main(String[] args){  
+        Scanner sc= new Scanner(System.in); 		//input 2 double numbers
+        System.out.print("Input first number: ");  
+        double a= sc.nextDouble();  
+        System.out.print("Input second number: ");  
+        double b= sc.nextDouble();
+        if((a>0)&&(a<1)&&(b>0)&&(b<1)){			//condition for the numbers to be between 0 and 1
+            System.out.println("True");
+        }
+        else{
+            System.out.println("False");
+        } 
+    }  
+}
+
+
+3rd Question
+public class AssessmentQ3 {
+    public static void main(String[] args){
+        boolean[][] array = {{true, false, true},	//boolean array declare as given
+                        {false,true,false}};
+        for(int i=0; i<2; i++){
+            for(int j=0; j<3; j++){
+                if(array[i][j]){			//traverse through 2D array and getting required output
+                    System.out.print("t ");
+                }
+                else{
+                    System.out.print("f ");
+                }
+            }
+            System.out.println();
+        } 
+    }  
+}
+
+
+4th Question
+public class AssessmentQ4 {
+    public static void main(String[] args){ 
+        int[][] array = {{10,20,30},			//array declaration
+                        {40,50,60}};
+        int[][] ar = new int[3][2];
+        for(int i=0; i<3; i++){
+            for(int j=0; j<2; j++){			
+                ar[i][j] = array[j][i];			//After changing rows and colms
+                System.out.print(ar[i][j]+ " ");
+            }
+            System.out.println();
+        } 
+    }  
+}
+
+
+5th Question
+public class AssessmentQ5 {
+    public static void main(String[] args){ 
+        int[] array = {1,4,17,7,25,3,100};		//array declare
+        int temp;
+        System.out.println("Original array:");
+        for(int i=0; i<7; i++){
+                System.out.print(array[i]+ " ");	//Original array print
+        } 
+        System.out.println();
+        System.out.println("3 largest elements of the said array are:");
+        for(int i=0; i<7; i++){
+            for(int j=i+1; j<7; j++){
+                if(array[i]<array[j]){			//sort in descending order
+                    temp = array[i];
+                    array[i] = array[j];
+                    array[j] = temp;
+                }
+            }
+        }
+        for(int i=0; i<3; i++){
+            System.out.print(array[i]+ " ");		//largest 3 number print
+    }
+    }  
+}
+
+
+6th Question
+import java.util.*;
+public class AssessmentQ6 {
+    public static void main(String[] args){  
+        Scanner sc= new Scanner(System.in); 
+        System.out.print("Input first number: ");  	//input number
+        int a= sc.nextInt(); 
+        int[] bin = new int[40];
+        int i, count=0;
+        for(i=0; a>0; i++){
+            bin[i] = a%2;				//convert to binary
+            a = a/2;
+        }
+        System.out.println(); 
+        System.out.print("Binary representation of " +a+ "is: ");
+        for(i=i-1; i>=0; i--){
+                System.out.print(bin[i]);
+        }
+        System.out.println(); 
+        for(i=0; i>bin.length; i++){			//count number of zeros
+            if(bin[i]==0){
+                count++;
+                 System.out.print("Number of zero bits is: " +count); 
+            }
+            else 
+           
+        }
+        
+    }  
+}
